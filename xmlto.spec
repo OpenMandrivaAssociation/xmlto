@@ -6,6 +6,7 @@ License: GPL
 Group: Publishing
 URL: http://cyberelk.net/tim/xmlto/
 Source0: ftp://cyberelk.net/tim/data/xmlto/stable/%{name}-%{version}.tar.bz2
+BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires: docbook-xsl >= 1.56.0
 BuildRequires: libxslt-proc
 BuildRequires: docbook-dtd42-xml
