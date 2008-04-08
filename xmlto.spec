@@ -1,7 +1,7 @@
 Summary: A tool for converting XML files to various formats
 Name: xmlto
-Version: 0.0.18
-Release: %mkrel 5
+Version: 0.0.20
+Release: %mkrel 1
 License: GPL
 Group: Publishing
 URL: http://cyberelk.net/tim/xmlto/
