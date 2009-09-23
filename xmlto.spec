@@ -1,11 +1,11 @@
 Summary: A tool for converting XML files to various formats
 Name: xmlto
-Version: 0.0.22
+Version: 0.0.23
 Release: %mkrel 1
 License: GPLv2+
 Group: Publishing
 URL: https://fedorahosted.org/xmlto/
-Source0: https://fedorahosted.org/xmlto/browser/%{name}-%{version}.tar.bz2
+Source0: https://fedorahosted.org/releases/x/m/xmlto/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires: docbook-xsl >= 1.56.0
 BuildRequires: libxslt-proc
