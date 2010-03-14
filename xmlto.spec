@@ -1,7 +1,7 @@
 Summary: A tool for converting XML files to various formats
 Name: xmlto
 Version: 0.0.23
-Release: %mkrel 1
+Release: %mkrel 2
 License: GPLv2+
 Group: Publishing
 URL: https://fedorahosted.org/xmlto/
