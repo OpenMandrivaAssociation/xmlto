@@ -1,7 +1,7 @@
 Summary: A tool for converting XML files to various formats
 Name: xmlto
 Version: 0.0.23
-Release: %mkrel 2
+Release: %mkrel 3
 License: GPLv2+
 Group: Publishing
 URL: https://fedorahosted.org/xmlto/
@@ -16,6 +16,7 @@ Requires: docbook-xsl >= 1.56.0
 Requires: xmltex
 Requires: libxslt-proc
 Requires: docbook-dtd42-xml
+Requires: docbook-dtd44-xml
 #gw for html->text either w3m, lynx or links are supported, w3m seems to be 
 # the preferred application
 #%if %mdkversion >= 200610
