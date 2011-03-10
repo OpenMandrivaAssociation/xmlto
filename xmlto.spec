@@ -1,7 +1,9 @@
+%define backend		fop
+
 Summary: A tool for converting XML files to various formats
 Name: xmlto
 Version: 0.0.23
-Release: %mkrel 3
+Release: %mkrel 4
 License: GPLv2+
 Group: Publishing
 URL: https://fedorahosted.org/xmlto/
@@ -12,8 +14,12 @@ BuildRequires: libxslt-proc
 BuildRequires: docbook-dtd42-xml
 # We rely entirely on the DocBook XSL stylesheets!
 Requires: docbook-xsl >= 1.56.0
+%if %{backend} == passivetex
 # For full functionality, we need passivetex.
-Requires: xmltex
+Requires:	xmltex
+%else
+Requires:	fop
+%endif
 Requires: libxslt-proc
 Requires: docbook-dtd42-xml
 Requires: docbook-dtd44-xml
@@ -32,7 +38,7 @@ stylesheets.
 %setup -q
 
 %build
-%configure2_5x
+%configure2_5x --with-backend=%{backend}
 %make
 make check
 
