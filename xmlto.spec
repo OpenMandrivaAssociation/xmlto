@@ -1,9 +1,9 @@
-%define backend		fop
+%define backend		passivetex
 
 Summary: A tool for converting XML files to various formats
 Name: xmlto
 Version: 0.0.23
-Release: %mkrel 4
+Release: %mkrel 5
 License: GPLv2+
 Group: Publishing
 URL: https://fedorahosted.org/xmlto/
