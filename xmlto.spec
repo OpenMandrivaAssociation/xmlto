@@ -2,7 +2,7 @@
 
 Summary: A tool for converting XML files to various formats
 Name: xmlto
-Version: 0.0.24
+Version: 0.0.25
 Release: %mkrel 1
 License: GPLv2+
 Group: Publishing
