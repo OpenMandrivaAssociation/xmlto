@@ -3,12 +3,11 @@
 Summary: A tool for converting XML files to various formats
 Name: xmlto
 Version: 0.0.25
-Release: %mkrel 1
+Release: 2
 License: GPLv2+
 Group: Publishing
 URL: https://fedorahosted.org/xmlto/
 Source0: https://fedorahosted.org/releases/x/m/xmlto/%{name}-%{version}.tar.bz2
-BuildRoot: %{_tmppath}/%{name}-%{version}-buildroot
 BuildRequires: docbook-xsl >= 1.56.0
 BuildRequires: libxslt-proc
 BuildRequires: docbook-dtd42-xml
@@ -21,13 +20,10 @@ Requires:	xmltex
 Requires:	fop
 %endif
 Requires: libxslt-proc
+Requires: docbook-dtd412-xml
 Requires: docbook-dtd42-xml
 Requires: docbook-dtd44-xml
-#gw for html->text either w3m, lynx or links are supported, w3m seems to be 
-# the preferred application
-#%if %mdkversion >= 200610
-#Suggests: w3m
-#%endif
+Requires: docbook-dtd45-xml
 Requires: lynx
 
 %description
@@ -49,13 +45,7 @@ rm -rf %{buildroot}
 [ -d %{buildroot}%{_datadir}/xmlto/xsl ] || \
   mkdir %{buildroot}%{_datadir}/xmlto/xsl
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %{_bindir}/*
 %{_mandir}/*/*
 %{_datadir}/xmlto
-
-
