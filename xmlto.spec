@@ -1,7 +1,7 @@
 Summary: A tool for converting XML files to various formats
 Name: xmlto
 Version: 0.0.25
-Release: 7%{?dist}
+Release: 8
 License: GPLv2+
 
 #Older versions up to xmlto-0.0.20
@@ -11,15 +11,13 @@ URL: https://fedorahosted.org/xmlto/
 Source0: https://fedorahosted.org/releases/x/m/%{name}/%{name}-%{version}.tar.bz2
 Patch1: xmlto-noextensions.patch
 
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-
 BuildRequires: docbook-xsl >= 1.56.0
-BuildRequires: libxslt
+BuildRequires: pkgconfig(libxslt)
 BuildRequires: util-linux, flex
 
 # We rely heavily on the DocBook XSL stylesheets!
 Requires: docbook-xsl >= 1.74.2
-Requires: libxslt
+Requires: xsltproc
 Requires: docbook-dtds
 Requires: util-linux, flex
 
