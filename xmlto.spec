@@ -9,7 +9,6 @@ License:	GPLv2+
 #Source0: http://cyberelk.net/tim/data/xmlto/stable/%{name}-%{version}.tar.bz2
 URL:		https://fedorahosted.org/xmlto/
 Source0:	https://fedorahosted.org/releases/x/m/%{name}/%{name}-%{version}.tar.bz2
-Patch1:		xmlto-noextensions.patch
 
 BuildRequires:	docbook-xsl >= 1.56.0
 BuildRequires:	pkgconfig(libxslt)
@@ -55,7 +54,6 @@ xhtml1 source format.
 
 %prep
 %setup -q
-%patch1 -p1 -b .noextension
 
 %build
 %configure BASH=/bin/bash
