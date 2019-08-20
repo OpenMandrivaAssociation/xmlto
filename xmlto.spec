@@ -1,14 +1,14 @@
 Summary:	A tool for converting XML files to various formats
 Name:		xmlto
-Version:	0.0.26
-Release:	6
+Version:	0.0.28
+Release:	1
 License:	GPLv2+
 
 #Older versions up to xmlto-0.0.20
 #URL: http://cyberelk.net/tim/xmlto/
 #Source0: http://cyberelk.net/tim/data/xmlto/stable/%{name}-%{version}.tar.bz2
 URL:		https://fedorahosted.org/xmlto/
-Source0:	https://fedorahosted.org/releases/x/m/%{name}/%{name}-%{version}.tar.bz2
+Source0:	https://releases.pagure.org/xmlto/%{name}-%{version}.tar.gz
 
 BuildRequires:	docbook-xsl >= 1.56.0
 BuildRequires:	pkgconfig(libxslt)
