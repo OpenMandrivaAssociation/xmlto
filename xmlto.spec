@@ -1,7 +1,7 @@
 Summary:	A tool for converting XML files to various formats
 Name:		xmlto
 Version:	0.0.28
-Release:	1
+Release:	2
 License:	GPLv2+
 
 #Older versions up to xmlto-0.0.20
@@ -12,14 +12,13 @@ Source0:	https://releases.pagure.org/xmlto/%{name}-%{version}.tar.gz
 
 BuildRequires:	docbook-xsl >= 1.56.0
 BuildRequires:	pkgconfig(libxslt)
-BuildRequires:	util-linux, flex
+BuildRequires:	util-linux
+BuildRequires:	flex
 
 # We rely heavily on the DocBook XSL stylesheets!
 Requires:	docbook-xsl >= 1.74.2
 Requires:	xsltproc
 Requires:	docbook-dtds
-Requires:	util-linux
-Requires:	flex
 
 %description
 This is a package for converting XML files to various formats using XSL
@@ -57,14 +56,13 @@ xhtml1 source format.
 
 %build
 %configure BASH=/bin/bash
-%make
+%make_build
 
 %check
 make check
 
 %install
-%makeinstall_std
-
+%make_install
 
 %files
 %doc COPYING ChangeLog README AUTHORS NEWS
@@ -76,7 +74,6 @@ make check
 %exclude %{_datadir}/xmlto/format/fo/pdf
 %exclude %dir %{_datadir}/xmlto/format/xhtml1/
 %exclude %{_datadir}/xmlto/format/xhtml1
-
 
 %files tex
 %{_datadir}/xmlto/format/fo/dvi
