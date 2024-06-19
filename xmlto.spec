@@ -14,6 +14,7 @@ BuildRequires:	docbook-xsl >= 1.56.0
 BuildRequires:	pkgconfig(libxslt)
 BuildRequires:	util-linux
 BuildRequires:	flex
+BuildRequires:	xsltproc
 
 # We rely heavily on the DocBook XSL stylesheets!
 Requires:	docbook-xsl >= 1.74.2
